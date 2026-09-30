@@ -37,10 +37,10 @@ jobs:
             /home/etudiant/.bun/bin/bun run --bun build
 
             echo "Redémarrage de l'application..."
-            sudo -n systemctl restart scolarite
+            sudo systemctl restart scolarite
 
             echo "Vérification du service..."
-            sudo -n systemctl is-active --quiet scolarite
+            sudo systemctl status scolarite
 
             echo "Attente du démarrage du serveur..."
             sleep 5
